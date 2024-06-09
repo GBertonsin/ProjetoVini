@@ -1,0 +1,24 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sequelize/mysql": "^7.0.0-alpha.41",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.47.4",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.9.8",
+    "pizzip": "^3.1.7",
+    "sequelize": "^6.37.3"
+  }
+}
