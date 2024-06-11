@@ -1,9 +1,9 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../Database/database");
-const Comentarios = require("../models/comentario");
-const Conclusoes = require("../models/conclusao");
-const Tecnica = require("../models/tecnica");
-const Observacao = require("../models/observacao");
+import { DataTypes } from "sequelize";
+import sequelize from "../Database/database.js";
+import Comentarios from "../models/comentario.js";
+import Conclusoes from "../models/conclusao.js";
+import Observacao from "../models/observacao.js";
+import Tecnica from "../models/tecnica.js";
 
 const TipoModelo = sequelize.define(
   "TipoModelo",
@@ -28,4 +28,4 @@ TipoModelo.hasMany(Conclusoes, { foreignKey: "Id_model" });
 TipoModelo.hasMany(Observacao, { foreignKey: "Id_model" });
 TipoModelo.hasMany(Tecnica, { foreignKey: "Id_model" });
 
-module.exports = TipoModelo;
+export default TipoModelo;

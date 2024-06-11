@@ -1,9 +1,9 @@
-const Comentario = require("../models/comentario.js");
+import Comentarios from "../models/comentario.js";
 
 //get
-exports.get = async (req, res) => {
+export const get = async (_req, res) => {
   try {
-    const comentario = await Comentario.findAll();
+    const comentario = await Comentarios.findAll();
     res.json(comentario);
   } catch (error) {
     console.error(error);
@@ -11,11 +11,11 @@ exports.get = async (req, res) => {
   }
 };
 
-exports.findOne = async (req, res) => {
+export const findOne = async (req, res) => {
   try {
     const { comentario_id } = req.params;
 
-    const comentario = await Comentario.findByPk(comentario_id);
+    const comentario = await Comentarios.findByPk(comentario_id);
 
     if (!comentario) {
       return res.status(404).json({ error: "Comentário não encontrado." });
@@ -29,10 +29,10 @@ exports.findOne = async (req, res) => {
 };
 
 //post
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
   const { content, Id_model } = req.body;
   try {
-    await Comentario.create({
+    await Comentarios.create({
       content,
       Id_model,
     });
@@ -44,11 +44,11 @@ exports.register = async (req, res) => {
 };
 
 //put
-exports.update = async (req, res) => {
+export const update = async (req, res) => {
   const { comentario_id } = req.params;
   const { content } = req.body;
   try {
-    await Comentario.update(
+    await Comentarios.update(
       {
         content,
       },
@@ -62,11 +62,10 @@ exports.update = async (req, res) => {
 };
 
 //Delete
-exports.delete = async (req, res) => {
+export const remove = async (req, res) => {
   const { comentario_id } = req.params;
-  const {} = req.body;
   try {
-    await Comentario.destroy({ where: { Id_coments: comentario_id } });
+    await Comentarios.destroy({ where: { Id_coments: comentario_id } });
     res.status(202).json({ message: "Comentario deleted successfully" });
   } catch (error) {
     console.error(error);

@@ -1,7 +1,6 @@
-const Conclusao = require("../models/conclusao.js");
-
+import Conclusao from '../models/conclusao.js';
 //get
-exports.get = async (req, res) => {
+export const get = async (_req, res) => {
   try {
     const conclusao = await Conclusao.findAll();
     res.json(conclusao);
@@ -11,7 +10,7 @@ exports.get = async (req, res) => {
   }
 };
 
-exports.findOne = async (req, res) => {
+export const findOne = async (req, res) => {
   try {
     const { conclusao_id } = req.params;
 
@@ -29,7 +28,7 @@ exports.findOne = async (req, res) => {
 };
 
 //post
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
   const { content, Id_model } = req.body;
   try {
     await Conclusao.create({
@@ -44,7 +43,7 @@ exports.register = async (req, res) => {
 };
 
 //put
-exports.update = async (req, res) => {
+export const update = async (req, res) => {
   const { conclusao_id } = req.params;
   const { content } = req.body;
   try {
@@ -62,9 +61,9 @@ exports.update = async (req, res) => {
 };
 
 //Delete
-exports.delete = async (req, res) => {
+export const remove = async (req, res) => {
   const { conclusao_id } = req.params;
-  const {} = req.body;
+  const { } = req.body;
   try {
     await Conclusao.destroy({ where: { Id_conc: conclusao_id } });
     res.status(202).json({ message: "Conclusao deleted successfully" });

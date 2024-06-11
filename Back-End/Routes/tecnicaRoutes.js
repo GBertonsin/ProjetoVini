@@ -1,10 +1,10 @@
-const express = require("express");
-const router = express.Router();
-const tecnicaController = require("../Controllers/tecnicaController ");
+import { Router } from "express";
+import { findOne, get, register, remove, update } from "../Controllers/tecnicaController.js";
+const router = Router();
 
-router.get("/", tecnicaController.get);
-router.get("/:tecnica_id", tecnicaController.findOne);
-router.post("/", tecnicaController.register);
-router.put("/:tecnica_id", tecnicaController.update);
-router.delete("/:tecnica_id", tecnicaController.delete);
-module.exports = router;
+router.get("/", get);
+router.get("/:tecnica_id", findOne);
+router.post("/", register);
+router.put("/:tecnica_id", update);
+router.delete("/:tecnica_id", remove);
+export default router;

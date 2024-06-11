@@ -1,10 +1,10 @@
-const express = require("express");
-const router = express.Router();
-const observacaoController = require("../Controllers/observacaoController");
+import { Router } from "express";
+import { findOne, get, register, remove, update } from "../Controllers/observacaoController.js";
+const router = Router();
 
-router.get("/", observacaoController.get);
-router.get("/:observacao_id", observacaoController.findOne);
-router.post("/", observacaoController.register);
-router.put("/:observacao_id", observacaoController.update);
-router.delete("/:observacao_id", observacaoController.delete);
-module.exports = router;
+router.get("/", get);
+router.get("/:observacao_id", findOne);
+router.post("/", register);
+router.put("/:observacao_id", update);
+router.delete("/:observacao_id", remove);
+export default router;

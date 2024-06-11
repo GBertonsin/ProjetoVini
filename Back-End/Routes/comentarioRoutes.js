@@ -1,10 +1,10 @@
-const express = require("express");
-const router = express.Router();
-const comentarioController = require("../Controllers/comentarioController");
+import { Router } from "express";
+import { findOne, get, register, remove, update } from "../Controllers/comentarioController.js";
+const router = Router();
 
-router.get("/", comentarioController.get);
-router.get("/:comentario_id", comentarioController.findOne);
-router.post("/", comentarioController.register);
-router.put("/:comentario_id", comentarioController.update);
-router.delete("/:comentario_id", comentarioController.delete);
-module.exports = router;
+router.get("/", get);
+router.get("/:comentario_id", findOne);
+router.post("/", register);
+router.put("/:comentario_id", update);
+router.delete("/:comentario_id", remove);
+export default router;

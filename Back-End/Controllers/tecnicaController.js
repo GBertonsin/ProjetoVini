@@ -1,7 +1,7 @@
-const Tecnica = require("../models/tecnica.js");
+import Tecnica from "../models/tecnica.js";
 
 //get
-exports.get = async (req, res) => {
+export const get = async (_req, res) => {
   try {
     const tecnica = await Tecnica.findAll();
     res.json(tecnica);
@@ -11,7 +11,7 @@ exports.get = async (req, res) => {
   }
 };
 
-exports.findOne = async (req, res) => {
+export const findOne = async (req, res) => {
   try {
     const { tecnica_id } = req.params;
 
@@ -29,7 +29,7 @@ exports.findOne = async (req, res) => {
 };
 
 //post
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
   const { content, Id_model } = req.body;
   try {
     await Tecnica.create({
@@ -44,7 +44,7 @@ exports.register = async (req, res) => {
 };
 
 //put
-exports.update = async (req, res) => {
+export const update = async (req, res) => {
   const { tecnica_id } = req.params;
   const { content } = req.body;
   try {
@@ -62,9 +62,8 @@ exports.update = async (req, res) => {
 };
 
 //Delete
-exports.delete = async (req, res) => {
+export const remove = async (req, res) => {
   const { tecnica_id } = req.params;
-  const {} = req.body;
   try {
     await Tecnica.destroy({ where: { Id_tecn: tecnica_id } });
     res.status(202).json({ message: "Tecnica deleted successfully" });

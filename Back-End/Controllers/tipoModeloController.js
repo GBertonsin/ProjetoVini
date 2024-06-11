@@ -1,11 +1,11 @@
-const TipoModelo = require("../models/tipoModelo.js");
-const Comentario = require("../models/comentario.js");
-const Conclusoes = require("../models/conclusao.js");
-const Tecnica = require("../models/tecnica.js");
-const Observacao = require("../models/observacao.js");
+import Comentario from "../models/comentario.js";
+import Conclusoes from "../models/conclusao.js";
+import Observacao from "../models/observacao.js";
+import Tecnica from "../models/tecnica.js";
+import TipoModelo from "../models/tipoModelo.js";
 
 //get
-exports.get = async (req, res) => {
+export const get = async (_req, res) => {
   try {
     const tipoModelo = await TipoModelo.findAll({
       include: [
@@ -22,7 +22,7 @@ exports.get = async (req, res) => {
   }
 };
 
-exports.findOne = async (req, res) => {
+export const findOne = async (req, res) => {
   try {
     const { tipoModelo_id } = req.params;
 
@@ -47,7 +47,7 @@ exports.findOne = async (req, res) => {
 };
 
 //post
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
   const { name } = req.body;
   try {
     await TipoModelo.create({
@@ -61,7 +61,7 @@ exports.register = async (req, res) => {
 };
 
 //put
-exports.update = async (req, res) => {
+export const update = async (req, res) => {
   const { tipoModelo_id } = req.params;
   const { name } = req.body;
   try {
@@ -79,9 +79,8 @@ exports.update = async (req, res) => {
 };
 
 //Delete
-exports.delete = async (req, res) => {
+export const remove = async (req, res) => {
   const { tipoModelo_id } = req.params;
-  const {} = req.body;
   try {
     await TipoModelo.destroy({ where: { Id_model: tipoModelo_id } });
     res.status(202).json({ message: "tipoModelo deleted successfully" });

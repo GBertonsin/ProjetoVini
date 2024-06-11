@@ -1,9 +1,6 @@
-const sequelize = require("../Database/database.js");
-const tipoModelo = require("../models/tipoModelo.js");
-const Comentarios = require("../models/comentario.js");
-const Conclusao = require("../models/conclusao.js");
+import sequelize from "../Database/database.js";
 
-const syncDatabase = async () => {
+export const syncDatabase = async () => {
   try {
     await sequelize.sync({ alter: true });
     console.log("Tabelas sincronizadas com sucesso!");
@@ -12,4 +9,3 @@ const syncDatabase = async () => {
   }
 };
 
-module.exports = syncDatabase;

@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../Database/database");
+import { DataTypes } from "sequelize";
+import sequelize from "../Database/database.js";
 
 const Comentarios = sequelize.define(
   "Comentarios",
@@ -20,4 +20,4 @@ const Comentarios = sequelize.define(
   }
 );
 
-module.exports = Comentarios;
+export default Comentarios;

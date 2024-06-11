@@ -1,10 +1,10 @@
-const express = require("express");
-const router = express.Router();
-const conclusaoController = require("../Controllers/conclusaoController");
+import { Router } from "express";
+import { findOne, get, register, remove, update } from "../Controllers/conclusaoController.js";
+const router = Router();
 
-router.get("/", conclusaoController.get);
-router.get("/:conclusao_id", conclusaoController.findOne);
-router.post("/", conclusaoController.register);
-router.put("/:conclusao_id", conclusaoController.update);
-router.delete("/:conclusao_id", conclusaoController.delete);
-module.exports = router;
+router.get("/", get);
+router.get("/:conclusao_id", findOne);
+router.post("/", register);
+router.put("/:conclusao_id", update);
+router.delete("/:conclusao_id", remove);
+export default router;

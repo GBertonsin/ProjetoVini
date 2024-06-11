@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../Database/database");
+import { DataTypes } from "sequelize";
+import sequelize from "../Database/database.js";
 const Tecnica = sequelize.define(
   "Tecnica",
   {
@@ -19,4 +19,4 @@ const Tecnica = sequelize.define(
   }
 );
 
-module.exports = Tecnica;
+export default Tecnica;

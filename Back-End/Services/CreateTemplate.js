@@ -1,14 +1,19 @@
 // PizZip is required because docx/pptx/xlsx files are all zipped files, and
 // the PizZip library allows us to load the file in memory
-const PizZip = require("pizzip");
-const Docxtemplater = require("docxtemplater");
+import Docxtemplater from "docxtemplater";
+import PizZip from "pizzip";
 
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-function createDocument(modelName, data, ArchiveName) {
+export function createDocument(modelName, data, ArchiveName) {
   // Load the docx file as binary content
-  const content = fs.readFileSync(path.resolve(__dirname, modelName), "binary");
+  const __filename = fileURLToPath(import.meta.url);
+
+  const __dirname = path.dirname(__filename);
+  const file = path.join(__dirname, modelName)
+  const content = fs.readFileSync(file, "binary");
 
   // Unzip the content of the file
   const zip = new PizZip(content);
@@ -35,5 +40,3 @@ function createDocument(modelName, data, ArchiveName) {
   // file or res.send it with express for example.
   fs.writeFileSync(path.resolve(__dirname, "Arquivos", ArchiveName), buf);
 }
-
-module.exports = createDocument;
