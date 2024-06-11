@@ -1,19 +1,5 @@
-const createDocument = require("./CreateTemplate.js");
-const {
-  SupCorporea,
-  VolAeSc,
-  massaAltura,
-  MassaDoVE,
-  MassaSC,
-  EspRelVE,
-  AEAO,
-  deltaD,
-  EA,
-  EE,
-  feTeichholz,
-  feCubo,
-} = require("./calculate.js");
-const { pacienteData } = require("./connectDb.js");
+import { createDocument } from "./CreateTemplate.js";
+import { AEAO, EA, EE, EspRelVE, MassaDoVE, MassaSC, SupCorporea, VolAeSc, deltaD, feCubo, feTeichholz, massaAltura } from "./calculate.js";
 
 const eTiss = 14.5;
 const vmxe = 89.1;
@@ -32,11 +18,11 @@ const supCorporea = SupCorporea(alturaPaciente, peso);
 
 const data = {
   Titulo: "RELATÓRIO DE ECOCARDIOGRAMA",
-  nomePaciente: pacienteData.nome,
-  idadePaciente: pacienteData.idade,
-  alturaPaciente: pacienteData.altura,
+  nomePaciente: 'Jonas',
+  idadePaciente: 25,
+  alturaPaciente: '1,70',
   diagnostico: "Ta batendo",
-  peso: pacienteData.peso,
+  peso: 75,
   VolAeSc: VolAeSc(supCorporea, VolAe),
   massaDoVE: MassaDoVE(PPdiast, Vediast, Sdiast),
   espRelVE: EspRelVE(PPdiast, Vediast),
