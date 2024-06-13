@@ -9,13 +9,11 @@ export function createBaseDocument({nome, idade, peso, altura}) {
   const ae = 32;
   const ao = 34;
   const VolAe = 0;
-  const alturaPaciente = 165;
-  const peso = 70;
   const Vediast = 47;
   const PPdiast = 8;
   const Sdiast = 8;
   const massaVE = MassaDoVE(PPdiast, Vediast, Sdiast);
-  const supCorporea = SupCorporea(alturaPaciente, peso);
+  const supCorporea = SupCorporea(altura, peso);
 
   const data = {
     Titulo: "RELATÓRIO DE ECOCARDIOGRAMA",

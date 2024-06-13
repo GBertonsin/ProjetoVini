@@ -7,7 +7,6 @@ const create = (req, res) => {
     // Aqui você pode fazer o que quiser com os dados do formulário
     // Por exemplo, chamar a função createDocument com esses dados
     createBaseDocument(data);
-
     // Responder ao cliente
     res.send("Dados do formulário recebidos com sucesso!");
   } catch (error) {
