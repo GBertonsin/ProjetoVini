@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="tab">
-                        <h2>Dados do Paciente</h2>
+                        <h4>Dados do Paciente</h4>
                         <label for="nome">Nome:</label>
                         <input placeholder="José Maria Pereira" oninput="this.className = ''" name="name" id="nome">
 
@@ -38,43 +38,160 @@
 
                         <label for="altura">Altura:</label>
                         <input placeholder="1.75" oninput="this.className = ''" name="Altura" id="altura">
+                        
+
+                    </div>
+
+                    <div class="tab">
+                        <h4> Estrutura e Anatomia</h4>
+                        
+                        <label for="ao">Raiz da Aorta (AO):</label>
+                        <input placeholder="" oninput="this.className = ''" name="ao" id="ao">
+
+                        <label for="aoAsc">Aorta Ascendente (AO asc):</label>
+                        <input placeholder="" oninput="this.className = ''" name="aoAsc" id="aoAsc">
+
+                        <label for="ae">Átrio Esquerdo (AE):</label>
+                        <input placeholder="" oninput="this.className = ''" name="ae" id="ae">
+
+                        <label for="ad">Ventrículo Direito (VD):</label>
+                        <input placeholder="" oninput="this.className = ''" name="ad" id="ad">
+
+                        <h4> Medidas Funcionais e Métricas</h4>
+
+                        <label for="veDiast">Diâmetro diastólico do Ventrículo Esquerdo (VE diast):</label>
+                        <input placeholder="" oninput="this.className = ''" name="veDiast" id="veDiast">
+
+                        <label for="veSist">Diâmetro sistólico do Ventrículo Esquerdo (VE sist):</label>
+                        <input placeholder="" oninput="this.className = ''" name="veSist" id="veSist">
+
+                        <label for="sDiast">Espessura do septo ventricular medida na diástole (S-Diast):</label>
+                        <input placeholder="" oninput="this.className = ''" name="sDiast" id="sDiast">
+
+                        <label for="ppDiast">Espessura da Parede posterior do ventrículo esquerdo medida na diástole (PP-Diast):</label>
+                        <input placeholder="" oninput="this.className = ''" name="ppDiast" id="ppDiast">
 
                     </div>
                     <div class="tab">
-                        <h6>What's your city?</h6>
-                        <p><input placeholder="City" oninput="this.className = ''" name="idade"></p>
+                        <h4> Medidas Estruturais e Funcionais do Coração</h4>
+
+                        <label for="aTiss">Velocidade do tecido miocárdico na contração atrial (A-Tiss):</label>
+                        <input placeholder="" oninput="this.className = ''" name="aTiss" id="aTiss">
+
+                        <label for="excS">Espessura do septo ventricular medida na sístole (Exc-S):</label>
+                        <input placeholder="" oninput="this.className = ''" name="excS" id="excS">
+
+                        <label for="excPp">Espessura da parede posterior do ventrículo esquerdo medida na sístole (Exc-PP):</label>
+                        <input placeholder="" oninput="this.className = ''" name="excPp" id="excPp">
+
+                        <label for="tapse">Excursão sistólica do plano do anel tricúspide (TAPSE):</label>
+                        <input placeholder="" oninput="this.className = ''" name="tapse" id="tapse">
+
+                        <h4>Tempos e Intervalos Cardíacos</h4>
+
+                        <label for="pulmonarTac">Tempo de aceleração da válvula pulmonar (pulmonar Tac):</label>
+                        <input placeholder="" oninput="this.className = ''" name="pulmonarTac" id="pulmonarTac">
+
+                        <label for="pulmonarTej">Tempo de ejeção da válvula pulmonar (pulmonar Tej):</label>
+                        <input placeholder="" oninput="this.className = ''" name="pulmonarTej" id="pulmonarTej">
+
+                        <label for="triv">Tempo de relaxamento isovolumétrico (TRIV):</label>
+                        <input placeholder="" oninput="this.className = ''" name="triv" id="triv">
+
+                        <label for="tdf">Tempo de desaceleração do fluxo de enchimento diastólico (TDF):</label>
+                        <input placeholder="" oninput="this.className = ''" name="tdf" id="tdf">
 
                     </div>
                     <div class="tab">
-                        <h6>What's your Favourite Shopping site?</h6>
-                        <p><input placeholder="Favourite Shopping site" oninput="this.className = ''" name="email"></p>
+                        <h4>Medidas de Fluxo e Velocidades das Válvulas</h4>
 
-                    </div>
-                    <div class="tab">
-                        <h6>What's your Favourite car?</h6>
-                        <p><input placeholder="Favourite car" oninput="this.className = ''" name="uname"></p>
+                        <label for="mitralVmxe">Velocidade máxima de ejeção da válvula mitral (Mitral Vmx-e):</label>
+                        <input placeholder="" oninput="this.className = ''" name="mitralVmxe" id="mitralVmxe">
+
+                        <label for="mitralVmxa">Velocidade máxima do fluxo atrial da válvula mitral (Mitral Vmx-a):</label>
+                        <input placeholder="" oninput="this.className = ''" name="mitralVmxa" id="mitralVmxa">
+
+                        <label for="aorticaVmx">Velocidade máxima do fluxo através da válvula aórtica (Aortica Vmx):</label>
+                        <input placeholder="" oninput="this.className = ''" name="aorticaVmx" id="aorticaVmx">
+
+                        <label for="aorticaGmax">Gradiente máximo da válvula aórtica (Aortica G-max):</label>
+                        <input placeholder="" oninput="this.className = ''" name="aorticaGmax" id="aorticaGmax">
+
+                        <label for="aorticaGmed">Gradiente médio da válvula aórtica (Aortica G-med):</label>
+                        <input placeholder="" oninput="this.className = ''" name="aorticaGmed" id="aorticaGmed">
+
+                        <label for="pulmonarGmax">Gradiente máximo da válvula pulmonar (Pulmonar G-max):</label>
+                        <input placeholder="" oninput="this.className = ''" name="pulmonarGmax" id="pulmonarGmax">
+
                     </div>
 
                     <div class="tab">
                         <h6>What's your Favourite Song?</h6>
                         <p><input placeholder="Favourite Song" oninput="this.className = ''" name="uname"></p>
                     </div>
+                    <br>
 
 
                     <div class="tab">
                         <h6>What's your Favourite Mobile brand?</h6>
                         <p><input placeholder="Favourite Mobile Brand" oninput="this.className = ''" name="uname"></p>
+                        
+                        <label for="tipoModelo">Tipo de Modelo:</label>
+                        <select oninput="this.className = ''" name="tipoModelo" id="tipoModelo">
+                            <option selected>Selecione o Tipo</option>
+                            <option value="1">PADRÃO</option>
+                            <option value="2">FE HIPERESTIMADA</option>
+                            <option value="3">Outros</option>
+                          </select>
+
+                          <label for="comentario">Comentário:</label>
+                          <select  onchange="selecionarComentario() = ''" name="Comentario" id="comentario">
+                            <option selected name="select_this" id="selectComent">Selecione o comentário</option>
+                            <option value="2">one</option>
+                            <option value="Ventrículo esquerdo apresenta hipertrofia miocárdica concêntrica, com provável disfunção sistólica discreta por hipocinesia difusa: dP/dT = 555 mmHg/s; VR > 1.200 mmHg/s); Fração de ejeção hiperestimada devido ao refluxo mitral importante (0,60).">Ventrículo esquerdo apresenta hipertrofia miocárdica concêntrica...</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <input type="text" id="comentarioSelecionado" class="input_select">
+
+                          <label for="observacao">Observação:</label>
+                          <select oninput="this.className = ''" name="Observacao" id="observacao">
+                            <option selected>Selecione a Observação</option>
+                            <option value="1">Relação E/E' =  <x> (VN < 8 . Quando >15 indica pressão atrial esquerda >20 mmHg).</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <input type="text" id="observacaoSelecionada" class="input_select">
+                          </select>
+                
+                          <label for="tecnica">Técnica:</label>
+                          <select oninput="this.className = ''" name="Tecnica" id="tecnica">
+                            <option selected>Selecione a tecnica</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <input type="text" id="tecnicaSelecionada" class="input_select">
+                          </select>
+
+                          <label for="conclusao">Conclusão:</label>
+                          <select oninput="this.className = ''" name="Conclusao" id="conclusao">
+                            <option selected>Selecione a tecnica</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <input type="text" id="conclusaoSelecionada" class="input_select">
+                          </select>
+                          <br>
                     </div>
+                    
                     <div class="thanks-message text-center" id="text-message"> <img
                             src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">
-                        <h3>Thankyou for your feedback!</h3> <span>Thanks for your valuable information. It helps us to
+                        <h3>Thank you for your feedback!</h3> <span>Thanks for your valuable information. It helps us to
                             improve our services!</span>
                     </div>
                     <div style="overflow:auto;" id="nextprevious">
                         <div style="float:right;">
-                            <button type="button" id="prevBtn" onclick="nextPrev(-1)"><i
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1), scrollToTop()"><i
                                     class="fa fa-angle-double-left"></i></button>
-                            <button type="button" id="nextBtn" onclick="nextPrev(1)"><i
+                            <button type="button" id="nextBtn" onclick="nextPrev(1), scrollToTop()"><i
                                     class="fa fa-angle-double-right"></i></button>
                         </div>
                         <button type="button" id="criarLaudo" onclick="submitData()"><i class="criarLaudo"></i> Criar
@@ -90,6 +207,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/form.js"></script>
+    <script src="../js/calculate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 
 </html>
