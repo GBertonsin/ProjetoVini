@@ -70,3 +70,10 @@ function fixStepIndicator(n) {
   }
   x[n].className += " active";
 }
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 200,
+    behavior: "smooth",
+  });
+}
