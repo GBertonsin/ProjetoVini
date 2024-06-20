@@ -1,7 +1,20 @@
 import { createDocument } from "./CreateTemplate.js";
-import { AEAO, EA, EE, EspRelVE, MassaDoVE, MassaSC, SupCorporea, VolAeSc, deltaD, feCubo, feTeichholz, massaAltura } from "./calculate.js";
+import {
+  AEAO,
+  EA,
+  EE,
+  EspRelVE,
+  MassaDoVE,
+  MassaSC,
+  SupCorporea,
+  VolAeSc,
+  deltaD,
+  feCubo,
+  feTeichholz,
+  massaAltura,
+} from "./calculate.js";
 
-export function createBaseDocument({nome, idade, peso, altura}) {
+export function createBaseDocument({ nome, idade, peso, altura }) {
   const eTiss = 14.5;
   const vmxe = 89.1;
   const vmxa = 41.4;
@@ -21,7 +34,7 @@ export function createBaseDocument({nome, idade, peso, altura}) {
     idadePaciente: idade,
     alturaPaciente: altura,
     diagnostico: "Ta batendo",
-    peso,
+    peso: peso,
     VolAeSc: VolAeSc(supCorporea, VolAe),
     massaDoVE: MassaDoVE(PPdiast, Vediast, Sdiast),
     espRelVE: EspRelVE(PPdiast, Vediast),
@@ -29,7 +42,7 @@ export function createBaseDocument({nome, idade, peso, altura}) {
     SupCorporea: SupCorporea(alturaPaciente, peso),
     massaAltura: massaAltura(alturaPaciente, massaVE),
     AO: 34,
-    AF: 32,
+    AE: 32,
     AEAO: AEAO(ae, ao),
     VD: 40,
     VEdiast: 47,
@@ -55,7 +68,7 @@ export function createBaseDocument({nome, idade, peso, altura}) {
     SVD: 0,
     mitralVmxe: 89.1,
     mitralVmxa: 41.4,
-    aorticaVmxe: 116,
+    aorticaVmx: 116,
     aorticaGmax: 0,
     aorticaGmed: 0,
     pulmonarGmax: 77,
@@ -73,6 +86,4 @@ export function createBaseDocument({nome, idade, peso, altura}) {
   var nomeModelo = "TestModelo.docx";
 
   createDocument(nomeModelo, data, nomeArquivo);
-
 }
-

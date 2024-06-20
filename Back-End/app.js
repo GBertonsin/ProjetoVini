@@ -5,11 +5,11 @@ import express from "express";
 import session from "express-session";
 import comentarioRoutes from "./Routes/comentarioRoutes.js";
 import conclusaoRoutes from "./Routes/conclusaoRoutes.js";
-import documentRoutes from './Routes/documentRoutes.js';
+import documentRoutes from "./Routes/documentRoutes.js";
 import observacaoRoutes from "./Routes/observacaoRoutes.js";
 import tecnicaRoutes from "./Routes/tecnicaRoutes.js";
 import tipoModeloRoutes from "./Routes/tipoModeloRoutes.js";
-import { connectDatabase } from './Services/connectDb.js';
+import { connectDatabase } from "./Services/connectDb.js";
 
 export const app = express();
 app.use(bodyParser.json());
@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Conectar ao banco de dados e iniciar o servidor
-await connectDatabase()
+await connectDatabase();
 
 // Definir as rotas
 app.use("/conclusao", conclusaoRoutes);
@@ -45,4 +45,4 @@ app.use("/tipoModelo", tipoModeloRoutes);
 app.use("/comentario", comentarioRoutes);
 app.use("/tecnica", tecnicaRoutes);
 app.use("/observacao", observacaoRoutes);
-app.use('/documento', documentRoutes);
+app.use("/documento", documentRoutes);
